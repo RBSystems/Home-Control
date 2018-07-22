@@ -54,7 +54,7 @@ namespace HomeControl
             }
             if (this.SupportsIROut)
             {
-                IR1.LoadIRDriver("");
+                IR1.LoadIRDriver("\\USER\\Samsung UE40J5100AK.ir");
                 IR1.Register();
             }
 
@@ -90,6 +90,7 @@ namespace HomeControl
                     case 1:
                         {
                             IR1.GetStandardCmdFromIRCmd("On");
+                            
                             IR1.SendSerialData("1");
                             
                             break;
